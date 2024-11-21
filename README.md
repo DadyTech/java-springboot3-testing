@@ -1,2 +1,2 @@
-# java-springboot3-testing
-Demonstração de habilidades em testes automatizados com JUnit 5, Mockito, TDD, TestContainers e Spring Boot 3.
+# Testes Automatizados com Java e Spring Boot 3
+Repositório criado como parte de minha formação no curso "Domine Testes Unitários e de Integração com Java e Spring Boot 3". Este projeto demonstra minhas habilidades práticas em testes automatizados e boas práticas no desenvolvimento de software.
