@@ -9,9 +9,12 @@ public class SimpleMathTest {
    @Test
     void  testSum(){
        SimpleMath xa = new SimpleMath();
-       Double actual = xa.sum(6.2D,2D);
+       Double firstNumber = 6.2D;
+       double secondNumber = 2D;
+       double actual = xa.sum(firstNumber,secondNumber);
        double expected = 8.2D;
-       Assertions.assertEquals(expected,actual,"6.2 + 2 did not produce expected 8.2!");
+       Assertions.assertEquals(expected,actual,
+               ()-> firstNumber + "+" + secondNumber +"did not produce " + expected);
        Assertions.assertNotEquals(9.2,actual);
        Assertions.assertNotNull(actual);
    }
