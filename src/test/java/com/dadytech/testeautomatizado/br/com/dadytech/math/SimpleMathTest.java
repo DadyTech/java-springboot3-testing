@@ -2,6 +2,7 @@ package com.dadytech.testeautomatizado.br.com.dadytech.math;
 
 import com.dadytech.testeautomatizado.math.SimpleMath;
 import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
 public class SimpleMathTest {
@@ -9,6 +10,7 @@ public class SimpleMathTest {
 // test[System Under Test]_[Condition or State Change]_[Expented Result]
 
    @Test
+   @DisplayName("test 6.2 + 2 = 8.2")
     void  testSum_when_SixDotTwoIsAddByTwo_ShouldReturnEigthDotTwo(){
        SimpleMath xa = new SimpleMath();
        Double firstNumber = 6.2D;
