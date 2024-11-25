@@ -19,4 +19,41 @@ public class SimpleMathTest {
        Assertions.assertNotNull(actual);
    }
 
+   @Test
+   void testSubtraction(){
+      SimpleMath math = new SimpleMath();
+      double primeiroNumero = 5;
+      double segundoNumero = 2;
+      double atual = math.subtraction(primeiroNumero,segundoNumero);
+      double expected = 3;
+      Assertions.assertEquals(expected,atual,
+              ()-> primeiroNumero + "+" + segundoNumero + " + did not produce "+ expected);
+      Assertions.assertNotNull(atual);
+
+   }
+   @Test
+   void testMultiplication(){
+      SimpleMath math = new SimpleMath();
+      double primeiroNumero = 5;
+      double segundoNumero = 2;
+      double atual = math.multiplication(primeiroNumero,segundoNumero);
+      double expected = 10;
+      Assertions.assertEquals(expected,atual,
+              ()-> primeiroNumero + "+ "+ segundoNumero + "did not produce "+ expected);
+      Assertions.assertNotNull(atual);
+
+   }
+   @Test
+   void testDivision(){
+      SimpleMath math = new SimpleMath();
+      double primeiroNumero = 10;
+      double segundoNumero = 2;
+      double atual = math.division(primeiroNumero,segundoNumero);
+      double expected = 5;
+      Assertions.assertEquals(expected,atual,
+              ()-> primeiroNumero + "+ "+ segundoNumero + "did not produce "+ expected);
+      Assertions.assertNotNull(atual);
+
+   }
+
 }
