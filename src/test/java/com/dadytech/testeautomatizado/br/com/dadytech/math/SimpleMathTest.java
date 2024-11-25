@@ -6,8 +6,10 @@ import org.junit.jupiter.api.Test;
 
 public class SimpleMathTest {
 
+// test[System Under Test]_[Condition or State Change]_[Expented Result]
+
    @Test
-    void  testSum(){
+    void  testSum_when_SixDotTwoIsAddByTwo_ShouldReturnEigthDotTwo(){
        SimpleMath xa = new SimpleMath();
        Double firstNumber = 6.2D;
        double secondNumber = 2D;
@@ -39,7 +41,7 @@ public class SimpleMathTest {
       double atual = math.multiplication(primeiroNumero,segundoNumero);
       double expected = 10;
       Assertions.assertEquals(expected,atual,
-              ()-> primeiroNumero + "+ "+ segundoNumero + "did not produce "+ expected);
+              ()-> primeiroNumero + " - "+ segundoNumero + "did not produce "+ expected);
       Assertions.assertNotNull(atual);
 
    }
@@ -51,7 +53,7 @@ public class SimpleMathTest {
       double atual = math.division(primeiroNumero,segundoNumero);
       double expected = 5;
       Assertions.assertEquals(expected,atual,
-              ()-> primeiroNumero + "+ "+ segundoNumero + "did not produce "+ expected);
+              ()-> primeiroNumero + " / "+ segundoNumero + "did not produce "+ expected);
       Assertions.assertNotNull(atual);
 
    }
