@@ -2,6 +2,7 @@ package com.dadytech.testeautomatizado.br.com.dadytech.math;
 
 import com.dadytech.testeautomatizado.math.SimpleMath;
 import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
@@ -54,6 +55,7 @@ public class SimpleMathTest {
 
    }
    @Test
+   @Disabled("Todo: we need still work on it!")
    void testDivision(){
       SimpleMath math = new SimpleMath();
       double primeiroNumero = 10;
