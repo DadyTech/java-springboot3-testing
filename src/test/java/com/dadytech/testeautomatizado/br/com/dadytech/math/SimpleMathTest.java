@@ -1,18 +1,35 @@
 package com.dadytech.testeautomatizado.br.com.dadytech.math;
 
 import com.dadytech.testeautomatizado.math.SimpleMath;
-import org.junit.jupiter.api.Assertions;
-import org.junit.jupiter.api.Disabled;
-import org.junit.jupiter.api.DisplayName;
-import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.*;
 
 public class SimpleMathTest {
 
 // test[System Under Test]_[Condition or State Change]_[Expented Result]
+SimpleMath xa ;
+
+    @BeforeAll
+   static  void setup(){
+      System.out.println("Running @BeforeAll method!");
+   }
+   @BeforeEach
+   void beforeEachMethod(){
+       xa = new SimpleMath();
+      System.out.println("Running @BeforeEach method!");
+   }
+   @AfterEach
+   void afterEachMethod(){
+      System.out.println("Running @AfterEach method!");
+   }
+   @AfterAll
+   static  void cleanup(){
+      System.out.println("Running @AfterAll method!");
+   }
 
    @Test
    @DisplayName("test 6.2 + 2 = 8.2")
     void  testSum_when_SixDotTwoIsAddByTwo_ShouldReturnEigthDotTwo(){
+      System.out.println("est 6.2 + 2 = 8.2");
 
       //Given / Arrange
        SimpleMath xa = new SimpleMath();
@@ -32,10 +49,11 @@ public class SimpleMathTest {
 
    @Test
    void testSubtraction(){
-      SimpleMath math = new SimpleMath();
+      System.out.println("est 5 - 2 = 3");
+
       double primeiroNumero = 5;
       double segundoNumero = 2;
-      double atual = math.subtraction(primeiroNumero,segundoNumero);
+      double atual = xa.subtraction(primeiroNumero,segundoNumero);
       double expected = 3;
       Assertions.assertEquals(expected,atual,
               ()-> primeiroNumero + "+" + segundoNumero + " + did not produce "+ expected);
@@ -44,10 +62,10 @@ public class SimpleMathTest {
    }
    @Test
    void testMultiplication(){
-      SimpleMath math = new SimpleMath();
+      System.out.println("est 5 * 2 = 10");
       double primeiroNumero = 5;
       double segundoNumero = 2;
-      double atual = math.multiplication(primeiroNumero,segundoNumero);
+      double atual = xa.multiplication(primeiroNumero,segundoNumero);
       double expected = 10;
       Assertions.assertEquals(expected,atual,
               ()-> primeiroNumero + " - "+ segundoNumero + "did not produce "+ expected);
@@ -57,10 +75,10 @@ public class SimpleMathTest {
    @Test
    @Disabled("Todo: we need still work on it!")
    void testDivision(){
-      SimpleMath math = new SimpleMath();
+
       double primeiroNumero = 10;
       double segundoNumero = 2;
-      double atual = math.division(primeiroNumero,segundoNumero);
+      double atual = xa.division(primeiroNumero,segundoNumero);
       double expected = 5;
       Assertions.assertEquals(expected,atual,
               ()-> primeiroNumero + " / "+ segundoNumero + "did not produce "+ expected);
