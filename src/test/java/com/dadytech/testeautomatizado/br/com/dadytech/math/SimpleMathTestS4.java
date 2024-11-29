@@ -4,6 +4,7 @@ import com.dadytech.testeautomatizado.math.SimpleMath;
 import org.junit.jupiter.api.*;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
+import org.junit.jupiter.params.provider.CsvFileSource;
 import org.junit.jupiter.params.provider.CsvSource;
 import org.junit.jupiter.params.provider.MethodSource;
 
@@ -34,15 +35,17 @@ public class SimpleMathTestS4 {
 
 
 
-    @DisplayName("Test 6.2 / 2 = 3.1")
+    @DisplayName("Test double subtraction [double primeiroNumero,  segundoNumero, expected] ")
     @ParameterizedTest
    // @MethodSource("testDivisionInputParameters")
     // @MethodSource()
+   /**
     @CsvSource({
             " 6.2D ,2D , 3.1D",
             "10D ,2D , 5D",
             " 20D ,2D , 10D"
-    })
+    })*/
+   @CsvFileSource(resources = "/testDivision.csv")
    void testDivision(double primeiroNumero, double segundoNumero, double expected) {
 
         System.out.println("Test "+ primeiroNumero + " / "+
